@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from "@vercel/analytics/react"
 import { Route, Routes } from "react-router-dom";
 import "./styles/App.css";
 import Header from "./components/Header";
@@ -47,6 +48,7 @@ function MainPage() {
       <section id="order">
         <Footer />
       </section>
+      <Analytics/>
     </>
   );
 }
