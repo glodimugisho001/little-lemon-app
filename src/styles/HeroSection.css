@@ -1,115 +1,81 @@
-.hero-section{
-    background-color: var(--color-primary-green);
+.hero-section {
+  background-color: var(--color-primary-green);
 }
-.hero-overlay{
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+
+.hero-overlay {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 4.5rem clamp(1rem, 3vw, 2rem);
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 420px);
+  gap: 2rem;
+  align-items: center;
 }
-.hero-overlay .hero-text{
-    padding: 70px 0 40px 0;
-}
+
 .hero-text h1 {
-    font-family: 'Markazi Text', serif;
-    font-size: 64px;
-    font-weight: 500;  /* 'medium' correspond à 500 */
-    color: var(--color-primary-yellow);
+  font-family: "Markazi Text", serif;
+  font-size: clamp(3rem, 8vw, 4.2rem);
+  font-weight: 700;
+  color: var(--color-primary-yellow);
+  line-height: 0.9;
 }
-.hero-text h2{
-    font-size: 40px ;
-    font-family: 'karla', sans-serif;
-    font-weight: 500;
-    margin-bottom: 15px;
-    color: var(--color-secondary);
+
+.hero-text h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 500;
+  margin-bottom: 0.9rem;
+  color: var(--color-secondary);
 }
-.hero-text p{
-    width: 320px;
-    margin-bottom: 40px;
-    font-size: 16px;
-    font-family:  'karla', sans-serif;
-    color: var(--color-secondary);
+
+.hero-text p {
+  max-width: 36ch;
+  margin-bottom: 1.8rem;
+  font-size: 1.05rem;
+  color: var(--color-secondary);
 }
-.hero-text .reserve-button{
-    background-color: var(--color-primary-yellow);
-    color: var(--color-button-text);
-    font-size: 16px;
-    font-weight: 900;
-    font-family:'karla', sans-serif;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 12px;
-    cursor: pointer;
+
+.hero-text .reserve-button {
+  background-color: var(--color-primary-yellow);
+  color: var(--color-button-text);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 12px;
+  display: inline-block;
 }
-.hero-overlay .hero-image{
-    position: absolute;
-    top:30px;
-    right: 0;
+
+.hero-text .reserve-button:hover,
+.hero-text .reserve-button:focus-visible {
+  background-color: #f8dd5d;
 }
-.hero-image img{
-    border-radius: 20px;
+
+.hero-image {
+  justify-self: end;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 900px) {
-    .hero-overlay {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 0 20px;
-    }
+  .hero-overlay {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+  }
 
-    .hero-overlay .hero-text {
-        padding: 40px 0;
-    }
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .hero-text h1 {
-        font-size: 48px;
-    }
-
-    .hero-text h2 {
-        font-size: 32px;
-    }
-
-    .hero-text p {
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto 30px;
-    }
-
-    .hero-overlay .hero-image {
-        position: relative;
-        top: 0;
-        right: 0;
-        margin-top: 30px;
-    }
-
-    .hero-image img {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 36px;
-    }
-
-    .hero-text h2 {
-        font-size: 24px;
-    }
-
-    .hero-text p {
-        font-size: 14px;
-    }
-
-    .hero-text .reserve-button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    .hero-image img {
-        max-width: 300px;
-    }
+  .hero-image {
+    justify-self: center;
+  }
 }

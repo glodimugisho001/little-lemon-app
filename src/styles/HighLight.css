@@ -1,135 +1,132 @@
-.hightlight-section{
-  margin-top: 100px;
+.highlight-section {
+  margin-top: 4rem;
 }
-.hightlight-container {
-  max-width: 900px;
-  margin:0 auto 50px auto;
+
+.highlight-container {
+  max-width: var(--content-width);
+  margin: 0 auto 3rem;
+  padding: 0 clamp(1rem, 3vw, 2rem);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
 }
-.hightlight-text{
-  width: 900px;
+
+.highlight-text {
+  max-width: var(--content-width);
   margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 2rem) 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 30px;
-}
-.hightlight-text h2{
-  font-size: 64px;
-  font-family: 'Markazi Text', sans-serif;
-  font-weight: 500;
-}
-.hightlight-card {
-  font-family: "karla", sans-serif;
-  background-color: var(--color-secondary);
-  border-radius: 8px;
-  border: 1px solid var(--color-primary-yellow);
-  box-shadow: 0 3px 20px var(--color-primary-yellow);
 }
 
-.hightlight-card img {
+.highlight-text h2 {
+  font-size: clamp(2.1rem, 7vw, 3.5rem);
+  font-family: "Markazi Text", serif;
+  font-weight: 700;
+}
+
+.highlight-menu-link {
+  background-color: var(--color-primary-yellow);
+  color: var(--color-button-text);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  padding: 0.65rem 1.15rem;
+  border-radius: 12px;
+}
+
+.highlight-menu-link:hover,
+.highlight-menu-link:focus-visible {
+  background-color: var(--color-primary-green);
+  color: #ffffff;
+}
+
+.highlight-card {
+  font-family: "Karla", sans-serif;
+  background-color: var(--color-secondary);
+  border-radius: 12px;
+  border: 1px solid #d8e0dd;
+  overflow: hidden;
+}
+
+.highlight-card img {
   display: block;
   width: 100%;
-  height: 164px;
+  height: 190px;
   object-fit: cover;
-  border-radius: 8px 8px 0 0;
 }
 
-.hightlight-text button {
-    background-color: var(--color-primary-yellow);
-    color: var(--color-button-text);
-    font-size: 16px;
-    font-weight: 900;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 12px;
-    text-decoration: none;
-    cursor: pointer;
-}
-.hightlight-name{
-  font-size: 20px;
-  font-family: 'karla', sans-serif;
-  font-weight: 500;
-  margin-top: 10px;
+.highlight-name {
+  font-size: 1.1rem;
+  font-family: "Karla", sans-serif;
+  font-weight: 600;
+  margin-top: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
-.hightlight-name span{
+
+.highlight-name span {
   color: var(--color-price);
 }
-.hightlight-card-description{
-  padding: 15px;
+
+.highlight-card-description {
+  padding: 1rem;
 }
-.hightlight-card-description p{
-  font-size: 14px;
-  padding: 20px 0;
+
+.highlight-card-description p {
+  font-size: 0.95rem;
+  padding: 1rem 0;
 }
-.hightlight-button-delivery{
+
+.highlight-button-delivery {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right:20px;
+  gap: 0.5rem;
 }
-.hightlight-button-delivery button{
+
+.highlight-button-delivery button {
   background-color: var(--color-primary-yellow);
   color: var(--color-button-text);
   font-weight: 600;
   border: none;
-  padding: 5px 10px;
+  padding: 0.45rem 0.8rem;
   border-radius: 10px;
   cursor: pointer;
 }
-.hightlight-button-delivery img{
+
+.highlight-button-delivery button:hover,
+.highlight-button-delivery button:focus-visible {
+  background-color: var(--color-primary-green);
+  color: #ffffff;
+}
+
+.highlight-button-delivery img {
   width: 24px;
   height: 24px;
 }
 
 @media (max-width: 900px) {
-    .hightlight-section {
-        margin-top: 60px;
-    }
+  .highlight-section {
+    margin-top: 3rem;
+  }
 
-    .hightlight-text {
-        width: 100%;
-        padding: 0 20px 30px;
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
+  .highlight-text {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
 
-    .hightlight-text h2 {
-        font-size: 48px;
-    }
-
-    .hightlight-container {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0 20px;
-    }
+  .highlight-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-@media (max-width: 600px) {
-    .hightlight-container {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-    }
-
-    .hightlight-text h2 {
-        font-size: 36px;
-    }
-
-    .hightlight-card {
-        max-width: 350px;
-        margin: 0 auto;
-    }
-
-    .hightlight-name {
-        font-size: 18px;
-    }
-
-    .hightlight-card-description p {
-        font-size: 13px;
-    }
+@media (max-width: 640px) {
+  .highlight-container {
+    grid-template-columns: 1fr;
+  }
 }

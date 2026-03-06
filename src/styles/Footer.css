@@ -1,83 +1,64 @@
-.footer{
-    background-color: var(--color-secondary);
+.footer {
+  background-color: var(--color-secondary);
+  border-top: 1px solid #d7ddda;
 }
-.footer-container{
-    display: flex;
-    justify-content: space-between;
-    width: 900px;
-    margin: 0 auto;
-    padding: 40px 0;
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.8rem;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 2.5rem clamp(1rem, 3vw, 2rem);
 }
-.item-footer{
-    padding-top: 40px;
+
+.item-footer {
+  padding-top: 1rem;
 }
-.footer-container .footer-logo{
-    width: 171px;
-    height: 298px;
+
+.footer-logo {
+  width: 132px;
+  height: auto;
 }
-.footer-navigation ul, .socoal-media-links ul{
-    list-style-type: none;
-    a{
-        text-decoration: none;
-    }
+
+.footer-navigation ul,
+.social-media-links ul {
+  list-style: none;
+  padding: 0;
 }
-.footer-container h4{
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 10px;
+
+.footer-container h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
 }
-.footer-container ul a{
-    font-size: 18px;
-    font-weight: 400;
-    color: #333;
+
+.footer-container p,
+.footer-container a {
+  font-size: 1rem;
+  color: #333;
 }
-.footer-container ul a:hover{
-    text-decoration: underline;
-    transition: all .1s ease;
-    color: var(--color-primary-yellow);
+
+.footer-container a:hover,
+.footer-container a:focus-visible {
+  text-decoration: underline;
+  color: var(--color-primary-green);
+}
+
+.contact {
+  font-style: normal;
 }
 
 @media (max-width: 900px) {
-    .footer-container {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-    }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .item-footer {
-        padding-top: 20px;
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .footer-container .footer-logo {
-        width: 120px;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .footer-navigation ul, .socoal-media-links ul {
-        padding: 0;
-    }
-
-    .footer-container ul a {
-        font-size: 16px;
-    }
+  .item-footer {
+    width: 100%;
+    max-width: 420px;
+    padding-top: 0.5rem;
+  }
 }
-
-@media (max-width: 480px) {
-    .footer-container h4 {
-        font-size: 20px;
-    }
-
-    .footer-container ul a {
-        font-size: 14px;
-    }
-
-    .item-footer {
-        padding-top: 15px;
-    }
-}
-

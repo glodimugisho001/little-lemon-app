@@ -1,50 +1,74 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 28px 0px;
-    max-width: 900px;
-    margin: 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 1rem clamp(1rem, 2.5vw, 2rem);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #ebebeb;
 }
-.nav{
-    display: flex;
-    align-items: center;
+
+.logo {
+  display: inline-flex;
 }
-.nav .nav-list{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    gap: 20px;
-    font-size: 18px;
+
+.logo img {
+  width: 160px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.15rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.nav-list a {
+  color: var(--color-button-text);
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  color: var(--color-primary-green);
+}
+
+.nav-cta {
+  background-color: var(--color-primary-yellow);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  display: inline-block;
+}
+
+.nav-cta:hover,
+.nav-cta:focus-visible {
+  background-color: var(--color-primary-green);
+  color: #ffffff;
 }
 
 @media (max-width: 900px) {
-    .header {
-        padding: 20px;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
+  .header {
+    position: static;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 
-    .nav {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .nav .nav-list {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header {
-        padding: 15px;
-    }
-
-    .nav .nav-list {
-        font-size: 14px;
-        gap: 10px;
-    }
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

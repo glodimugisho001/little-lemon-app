@@ -1,6 +1,6 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../styles/ConfirmedBooking.css';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "../styles/ConfirmedBooking.css";
 
 export default function ConfirmedBooking() {
   const navigate = useNavigate();
@@ -9,19 +9,20 @@ export default function ConfirmedBooking() {
     <div className="confirmation-container">
       <div className="confirmation-card">
         <div className="confirmation-icon">✓</div>
-        <h1 className="confirmation-title">Réservation confirmée !</h1>
+        <h1 className="confirmation-title">Reservation confirmed</h1>
         <p className="confirmation-message">
-          Merci pour votre réservation chez Little Lemon 🍋
+          Thank you for booking a table at Little Lemon.
         </p>
         <div className="confirmation-details">
-          <p>Votre réservation a été enregistrée avec succès.</p>
-          <p>Nous vous contacterons bientôt pour confirmer les détails.</p>
+          <p>Your reservation was successfully submitted.</p>
+          <p>We look forward to welcoming you soon.</p>
         </div>
-        <button 
-          className="back-button"
-          onClick={() => navigate('/')}
+        <button
+          type="button"
+          className="confirmation-back-button"
+          onClick={() => navigate("/")}
         >
-          Retour à l&apos;accueil
+          Back to homepage
         </button>
       </div>
     </div>

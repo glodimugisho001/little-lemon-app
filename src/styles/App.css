@@ -1,16 +1,77 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-:root{
-    --color-primary-green: #495E57;
-    --color-primary-yellow: #F4CE14;
-    --color-secondary: #EDEFEE;
-    --color-button-text: #333333;
-    --color-price: #EE9972;
+
+:root {
+  --color-primary-green: #495e57;
+  --color-primary-yellow: #f4ce14;
+  --color-secondary: #edefee;
+  --color-button-text: #333333;
+  --color-price: #ee9972;
+  --color-text: #1f1f1f;
+  --content-width: 1080px;
 }
-a{
-    text-decoration: none !important; 
-    color: #333333;
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.App {
+  color: var(--color-text);
+  background: #ffffff;
+}
+
+main {
+  min-height: 60vh;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: #ffffff;
+  color: #000000;
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--color-primary-green);
+  border-radius: 0.5rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.not-found {
+  max-width: var(--content-width);
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.not-found h1 {
+  font-family: "Markazi Text", serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.not-found p {
+  margin-bottom: 1.25rem;
+}
+
+.not-found-link {
+  display: inline-block;
+  background-color: var(--color-primary-yellow);
+  color: var(--color-button-text);
+  font-weight: 700;
+  padding: 0.7rem 1.1rem;
+  border-radius: 0.6rem;
+}
+
+.not-found-link:hover,
+.not-found-link:focus-visible {
+  background-color: var(--color-primary-green);
+  color: #ffffff;
 }

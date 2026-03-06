@@ -9,67 +9,65 @@
 }
 
 .confirmation-card {
-  background-color: white;
-  padding: 3rem;
+  background-color: #ffffff;
+  padding: 2.5rem;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 600px;
+  max-width: 620px;
   width: 100%;
 }
 
 .confirmation-icon {
   color: var(--color-primary-green);
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
 }
 
 .confirmation-title {
   color: var(--color-primary-green);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-family: 'Markazi Text', serif;
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  margin-bottom: 0.8rem;
+  font-family: "Markazi Text", serif;
 }
 
 .confirmation-message {
   color: var(--color-button-text);
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 1.4rem;
 }
 
 .confirmation-details {
   background-color: var(--color-secondary);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
+  padding: 1.3rem;
+  border-radius: 10px;
+  margin-bottom: 1.4rem;
 }
 
 .confirmation-details p {
-  margin: 0.5rem 0;
+  margin: 0.45rem 0;
   color: var(--color-button-text);
 }
 
-.back-button {
+.confirmation-back-button {
   background-color: var(--color-primary-yellow);
   color: var(--color-button-text);
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1.4rem;
   border: none;
   border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.back-button:hover {
+.confirmation-back-button:hover,
+.confirmation-back-button:focus-visible {
   background-color: var(--color-primary-green);
-  color: var(--color-secondary);
-  transform: translateY(-2px);
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
   .confirmation-card {
-    padding: 2rem;
+    padding: 1.6rem;
   }
 }
